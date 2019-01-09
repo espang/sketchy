@@ -1,6 +1,8 @@
 # sketchy
 
-A Clojure library designed to ... well, that part is up to you.
+[![Clojars Project](https://img.shields.io/clojars/v/espang/sketchy.svg)](https://clojars.org/espang/sketchy)
+
+Little wrapper around yahoo's data sketches.
 
 ## Usage
 
@@ -10,5 +12,4 @@ FIXME
 
 Copyright © 2019 FIXME
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under Apache 2.0 LICENSE
