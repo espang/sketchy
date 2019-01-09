@@ -1,6 +1,6 @@
-(ns sketchy.theta-test
+(ns sketchy.hll-test
   (:require [clojure.test :refer :all]
-            [sketchy.theta :refer :all]))
+            [sketchy.hll :refer :all]))
 
 (deftest test-union
   (is (= 4 (int (cardinality
@@ -15,9 +15,3 @@
                     (union
                       s1
                       (make [3 4]))))))))
-
-(deftest test-Intersection
-  (is (= 0 (int (cardinality
-                  (intersection
-                    (make [1 2])
-                    (make [3 4])))))))

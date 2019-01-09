@@ -29,3 +29,9 @@
     (.update union s1)
     (.update union s2)
     (-> union .getResult)))
+
+(defn intersection [s1 s2]
+  (let [intersection (-> (SetOperation/builder) .buildIntersection)]
+    (.update intersection s1)
+    (.update intersection s2)
+    (-> intersection .getResult)))
