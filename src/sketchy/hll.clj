@@ -2,13 +2,15 @@
   (:import [com.yahoo.sketches.hll HllSketch
                                    Union]))
 
-(defn update! [s val]
+(defn update!
   "Update takes a theta sketch s and a value val
    and updates s by adding val."
+  [s val]
   (.update s val))
 
-(defn make [coll]
+(defn make
   "Makes a hll from the collection."
+  [coll]
   (reduce (fn [acc val]
             (do
               (.update acc val)

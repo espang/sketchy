@@ -6,13 +6,15 @@
                                      CompactSketch
                                      Sketches]))
 
-(defn update! [s val]
+(defn update!
   "Update takes a theta sketch s and a value val
    and updates s by adding val."
+  [s val]
   (.update s val))
 
-(defn make [coll]
+(defn make
   "Makes a theta sketch from the collection."
+  [coll]
   (reduce (fn [acc val]
             (do
               (.update acc val)
@@ -20,8 +22,9 @@
           (-> (UpdateSketch/builder) .build)
           coll))
 
-(defn cardinality [sketch]
+(defn cardinality
   "Returns the cardinality of the set."
+  [sketch]
   (.getEstimate sketch))
 
 (defn union [s1 s2]
